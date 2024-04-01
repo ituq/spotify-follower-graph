@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+    <span class="top">
+        <h1>Spotify Follower Graph</h1>
+    </span>
+    <span>
+        <form id="input">
+            <label for="field">Enter the URL of the profile</label>
+            <input type="text" id="field" maxlength="512">
+        </form>
+        <label for="depth">Choose Recursion Depth:</label>
+        <select name="depth" id="depth">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+
+        </select>
+    </span>
+    <button id="submit">Submit</button>
+    <span id="status"></span>
+    <script src="script.js"></script>
+</body>
+</html>

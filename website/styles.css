@@ -1,0 +1,20 @@
+h1{
+    font: bold;
+    font-family:  Helvetica,Arial, sans-serif;
+    color: orange;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(19, 19, 161);
+}
+.top{
+    display: flex;
+    flex-direction: row;
+}
+label{
+    color: orange;
+}
+#status{
+    color: orange;
+}
