@@ -29,4 +29,4 @@ def result():
 def custom_static(filename):
     return send_from_directory('static/graphs', filename)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=80)
