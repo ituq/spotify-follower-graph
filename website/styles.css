@@ -18,3 +18,49 @@ label{
 #status{
     color: orange;
 }
+input{
+  height: 2em; /* Example height */
+  line-height: 30px; /* Same as the height for vertical centering */
+  padding: 0 10px; /* Add some horizontal padding */
+  /* Adjust the font size as necessary */
+  font-size: 16px;
+  border: 0px;
+  color: white;
+  width: 200px;
+  background-color: blue;
+  outline: none;
+}
+#inputs{
+    flex-direction: column;
+    justify-content: center;
+}
+#inputs >*{
+padding: 5px;
+}
+#ui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20em;
+}
+#selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+label{
+    padding-right: 10px;
+    font-size: 23px;
+    font-family:  Helvetica,Arial, sans-serif;
+    color: orange;
+}
+select{
+    height: 2em;
+    width: 3em;
+}
+button{
+    width: 220px;
+    height: 2em;
+    border-width: 0px;
+    border-radius: 5px;
+}

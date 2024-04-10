@@ -1,13 +1,10 @@
+from Session import Session
 from pyvis.network import Network
 from UserProfile import UserProfile
-#custom type to represent spotify profile
-
-
-
 graph=Network(directed=True,height="1000px")
-
-depth_limit=2
-starting_id="81s0j2853r21a3jdqh2zzqsyz"
+sesh=Session()
+depth_limit=1
+starting_id="6rv5h4xn1mo8q0i83b3jcx9g0"
 graph.add_node(starting_id,label="Base",shape="dot",color='#f7071f')
 visited={id:True}
 #breadth-first-search method that's run from the input profile
@@ -29,7 +26,5 @@ def bfs(lvl, curr,limit, graph:Network):
             visited[follower]=True
     bfs(lvl+1,next,limit,graph)
 
-bfs(0,[UserProfile("base",starting_id,'')],depth_limit,graph)
+bfs(0,[UserProfile("base",starting_id,'',sesh)],depth_limit,graph)
 graph.show("graph.html")
-
-    

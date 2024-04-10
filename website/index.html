@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-</head> 
+</head>
 <body>
-    <span class="top">
-        <h1>Spotify Follower Graph</h1>
-    </span>
-    <span>
-        <form id="input">
-            <label for="field">Enter the URL of the profile</label>
-            <input type="text" id="field" maxlength="512">
-        </form>
-        <label for="depth">Choose Recursion Depth:</label>
-        <select name="depth" id="depth">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
+    <span id="ui">
 
-        </select>
+        <h1>Spotify Follower Graph</h1>
+        <span id="inputs">
+            <form id="input_url" >
+                <input type="text" id="field" maxlength="512" placeholder="Enter the URL of the profile">
+            </form>
+
+            <span id="selector">
+                <label for="depth">Size:</label>
+                <select name="depth" id="depth">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </span>
+        </span>
+        <button id="submit">SUBMIT</button>
+        <span id="status"></span>
     </span>
-    <button id="submit">Submit</button>
-    <span id="status"></span>
     <script src="script.js"></script>
 </body>
 </html>
