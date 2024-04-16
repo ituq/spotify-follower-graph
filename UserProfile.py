@@ -32,7 +32,7 @@ class UserProfile:
     }
         response = requests.get(url, headers=headers)
         time.sleep(1)
-        print(response.text)
+        print("fetching followers of "+self.name)
         data= json.loads(response.text)
         if 'profiles' not in data:
             return []

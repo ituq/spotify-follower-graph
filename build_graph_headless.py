@@ -1,7 +1,9 @@
 from Session import Session
 from pyvis.network import Network
 from UserProfile import UserProfile
+import shutil
 def build_graph(depth_limit,starting_id):
+    print(f"id: {starting_id},{type(starting_id)} depth: {depth_limit},{type(depth_limit)}")
     graph=Network(directed=True,height="1000px")
     sesh=Session()
     graph.add_node(starting_id,label="Base",shape="dot",color='#f7071f')
@@ -26,4 +28,6 @@ def build_graph(depth_limit,starting_id):
         bfs(lvl+1,next,limit,graph)
 
     bfs(0,[UserProfile("base",starting_id,'',sesh)],depth_limit,graph)
-    graph.show(f"../graphs/{starting_id}.html")
+    graph.show(starting_id+".html",notebook=False)
+    # html is now in top level directory so we move it to the graphs folder
+    shutil.move(starting_id+".html","static/graphs/"+starting_id+".html")
