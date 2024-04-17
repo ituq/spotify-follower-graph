@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <span id="ui">
+    <span class="viewport">
+        <span id="ui">
+            <h1>Spotify Follower Graph</h1>
+            <span id="inputs">
+                <form id="input_url" >
+                    <input type="text" id="field" maxlength="512" placeholder="Enter the URL of the profile">
+                </form>
 
-        <h1>Spotify Follower Graph</h1>
-        <span id="inputs">
-            <form id="input_url" >
-                <input type="text" id="field" maxlength="512" placeholder="Enter the URL of the profile">
-            </form>
-
-            <span id="selector">
-                <label for="depth">Size:</label>
-                <select name="depth" id="depth">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
+                <span id="selector">
+                    <label for="depth">Size:</label>
+                    <select name="depth" id="depth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </span>
             </span>
+            <button id="submit">SUBMIT</button>
+            <span id="status"></span>
         </span>
-        <button id="submit">SUBMIT</button>
-        <span id="status"></span>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </span>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

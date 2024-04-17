@@ -1,33 +1,41 @@
 h1{
     font: bold;
     font-family:  Helvetica,Arial, sans-serif;
-    color: orange;
+    color: white;
+    font-size: 20px;
 }
-body{
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.viewport{
     display: flex;
+    height: 100%;
+    background-color: rgb(50, 50, 50);
+    justify-content: center;
     flex-direction: column;
-    background-color: rgb(19, 19, 161);
+    align-content: center;
+    flex-wrap: wrap;
+
+
 }
 .top{
     display: flex;
     flex-direction: row;
 }
-label{
-    color: orange;
-}
+
 #status{
     color: orange;
 }
 input{
-  height: 2em; /* Example height */
-  line-height: 30px; /* Same as the height for vertical centering */
-  padding: 0 10px; /* Add some horizontal padding */
-  /* Adjust the font size as necessary */
+  height: 2em;
+  line-height: 30px;
+  padding: 0 10px;
   font-size: 16px;
   border: 0px;
   color: white;
   width: 200px;
-  background-color: blue;
+  background-color: rgb(80 , 80, 80);
   outline: none;
 }
 #inputs{
@@ -41,7 +49,11 @@ padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20em;
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(75 , 75, 75);
+    border-radius: 10px;
 }
 #selector{
     display: flex;
@@ -52,7 +64,7 @@ label{
     padding-right: 10px;
     font-size: 23px;
     font-family:  Helvetica,Arial, sans-serif;
-    color: orange;
+    color: white;
 }
 select{
     height: 2em;
@@ -63,4 +75,20 @@ button{
     height: 2em;
     border-width: 0px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
