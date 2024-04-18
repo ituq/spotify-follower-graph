@@ -13,7 +13,7 @@ submit.addEventListener("click", () => {
         const formData = new FormData();
         formData.append('url', field.value);
         formData.append('depth', recursionDepthSelector.value);
-
+        submit.innerHTML='<div class="loader""></div>'
         // Fetch API to send form data to the server
         fetch('/process', {
             method: 'POST',

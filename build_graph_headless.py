@@ -4,7 +4,7 @@ from UserProfile import UserProfile
 import shutil
 def build_graph(depth_limit,starting_id):
     print(f"id: {starting_id},{type(starting_id)} depth: {depth_limit},{type(depth_limit)}")
-    graph=Network(directed=True,height="1000px")
+    graph=Network(directed=True,height="1080px")
     sesh=Session()
     graph.add_node(starting_id,label="Base",shape="dot",color='#f7071f')
     visited={id:True}

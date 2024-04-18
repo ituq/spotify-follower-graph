@@ -62,7 +62,7 @@ class Session:
         # Extract the clientId from the scipt
         ID_match=re.search(r'clientID:\s*\"([a-fA-F0-9]+)\"',script)
         client_id=ID_match.group() if ID_match else "Not found"
-        #client_id is now of form clientID: "dmksacfjsndcasdocj"
+        #client_id is now of form 'clientID: "dmksacfjsndcasdocj"'
         extractPattern = r'"([^"]*)"'
         match=re.search(extractPattern,client_id)
         self.client_id=match.group(1) if match else "error"
