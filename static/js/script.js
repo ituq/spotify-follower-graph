@@ -4,7 +4,7 @@ const submit = document.getElementById("submit");
 const statusElement = document.getElementById("status");
 
 submit.addEventListener("click", () => {
-    const profileRegex = /^https:\/\/open\.spotify\.com\/user\/[a-zA-Z0-9]+(\?si=[a-zA-Z0-9]+)?$/;
+  const profileRegex = /^https:\/\/open\.spotify\.com\/user\/[a-zA-Z0-9._-]+(\?si=[a-zA-Z0-9]+)?$/;
     if (!profileRegex.test(field.value)) {
         statusElement.textContent = "Please enter a valid profile URL";
         console.warn("failed");
